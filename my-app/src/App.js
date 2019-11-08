@@ -21,14 +21,16 @@ function App() {
   const [out, setOuts] = useState(0);
 
   const addHit = () => {
-    if (!user) {
+    if (user) {
       setVisitorScore(visitorscore + 1)
       setBall(0)
       setStrike(0)
+      setFoul(0)
     } else {
       setHomeScore(homeScore + 1)
       setBall(0)
       setStrike(0)
+      setFoul(0)
     }
   }
   const addFoul = () => {

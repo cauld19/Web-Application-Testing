@@ -1,26 +1,30 @@
 import React from "react";
 
-const Display = ({score, ball, foul, strike, out, user, homeScore, inning, userCount}) => {
+const Display = ({visitorscore, ball, foul, strike, out, homeScore, inning}) => {
 
 
     return (
         <div>
-            <div>
-                Score: {score}
-                <br />
-                HomeScore: {homeScore}
+            <div className="score-board">
+                <div>
+                    HomeScore: {homeScore}
+                </div>
+                <div>
+                    VisitorScore: {visitorscore}
+                </div>
+                
             </div>
             <div>
-                Strikes: {strike}
+                Strikes: {strike ? strike : ""}
             </div>
             <div>
-                Balls: {ball}
+                Balls: {ball ? ball : ""}
             </div>
             <div>
-                Fouls: {foul}
+                Fouls: {foul ? foul : ""}
             </div>
             <div>
-                Outs: {out}
+                Outs: {out ? out : ""}
             </div>
             <div>
                 Inning: {Math.floor(inning)}
