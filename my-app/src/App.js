@@ -8,7 +8,7 @@ import Display from "./components/Display"
 function App() {
 
   const [user, setUser] = useState(false);
-  const [userCount, setUserCount] = useState(16)
+  const [userCount, setUserCount] = useState(0)
   const [ball, setBall] = useState(0);
   const [foul, setFoul] = useState(0);
   const [strike, setStrike] = useState(0);
