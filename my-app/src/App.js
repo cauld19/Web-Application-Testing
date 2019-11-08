@@ -8,7 +8,7 @@ import Display from "./components/Display"
 function App() {
 
   const [user, setUser] = useState(false);
-  const [userCount, setUserCount] = useState(0)
+  const [userCount, setUserCount] = useState(16)
   const [ball, setBall] = useState(0);
   const [foul, setFoul] = useState(0);
   const [strike, setStrike] = useState(0);
@@ -56,10 +56,13 @@ function App() {
   const addStrike = () => {
     if (userCount >= 17) {
       alert(`Game over! final score is Home:${homeScore} Visitor:${visitorscore}`)
+      newGame();
     } else if (out >= 2 && strike >= 2 ) {
       setUser(!user)
       setOuts(0)
       setStrike(0)
+      setBall(0)
+      setFoul(0)
       setUserCount(userCount + 1)
       setInnning(inning + 0.5)
     } else if (strike >= 2) {
@@ -70,6 +73,18 @@ function App() {
       setStrike(strike + 1)
     }
     console.log(strike)
+  }
+
+  const newGame = () => {
+    setHomeScore(0)
+    setVisitorScore(0)
+    setStrike(0)
+    setBall(0)
+    setFoul(0)
+    setOuts(0)
+    setInnning(1)
+    setUserCount(0)
+    setUser(false)
   }
 
 
@@ -92,6 +107,7 @@ function App() {
         homeScore={homeScore}
         inning={inning}
         userCount={userCount}
+        newGame={newGame}
       />
     </div>
   );

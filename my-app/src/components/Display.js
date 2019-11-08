@@ -1,6 +1,6 @@
 import React from "react";
 
-const Display = ({visitorscore, ball, foul, strike, out, homeScore, inning}) => {
+const Display = ({visitorscore, ball, foul, strike, out, homeScore, inning, newGame}) => {
 
 
     return (
@@ -12,7 +12,6 @@ const Display = ({visitorscore, ball, foul, strike, out, homeScore, inning}) => 
                 <div>
                     VisitorScore: {visitorscore}
                 </div>
-                
             </div>
             <div>
                 Strikes: {strike ? strike : ""}
@@ -32,6 +31,7 @@ const Display = ({visitorscore, ball, foul, strike, out, homeScore, inning}) => 
             {/* <div>
                 user: {userCount}
             </div> */}
+            <button onClick={newGame}>New Game</button>
         </div>
         
     )
