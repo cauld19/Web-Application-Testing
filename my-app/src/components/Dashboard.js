@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Dashboard = ({addHit, addBall, addFoul, addStrike}) => {
+const Dashboard = ({addHit, addBall, addFoul, addStrike, addError}) => {
 
     
 
@@ -12,6 +12,7 @@ const Dashboard = ({addHit, addBall, addFoul, addStrike}) => {
             <button onClick={addBall}>Ball</button>
             <button onClick={addFoul}>Foul</button>
             <button onClick={addStrike}>Strike</button>
+            <button onClick={addError}>Error</button>
         </div>
     )
 }
