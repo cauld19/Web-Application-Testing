@@ -1,18 +1,18 @@
 import React from "react";
 
-const Display = ({visitorScore, ball, foul, strike, out, homeScore, inning, newGame, homeError, visitorError}) => {
+const Display = ({visitorTeamScore, ball, foul, strike, out, homeTeamScore, inning, newGame, homeTeamError, visitorTeamError}) => {
 
 
     return (
         <div>
             <div className="score-board">
                 <div>
-                    <h2>HomeScore: {homeScore}</h2>
-                    <h5>Errors: {homeError} </h5>
+                    <h2>HomeScore: {homeTeamScore}</h2>
+                    <h5>Errors: {homeTeamError} </h5>
                 </div>
                 <div>
-                    <h2>VisitorScore: {visitorScore}</h2>
-                    <h5>Errors: {visitorError} </h5>
+                    <h2>VisitorScore: {visitorTeamScore}</h2>
+                    <h5>Errors: {visitorTeamError} </h5>
                 </div>
             </div>
             <div>
