@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.score-board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
